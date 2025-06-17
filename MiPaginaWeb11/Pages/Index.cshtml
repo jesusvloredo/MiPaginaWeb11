@@ -1,0 +1,90 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .welcome-container {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #00ffcc;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00ffc8, #00aaff);
+            color: white;
+            padding: 12px 25px;
+            margin: 10px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.3s ease;
+            font-weight: bold;
+        }
+
+            .btn:hover {
+                transform: scale(1.05);
+                background: linear-gradient(45deg, #00aaff, #0055ff);
+            }
+
+        @@keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>¡Bienvenidos a mi página web!</h1>
+        <p>Diseñada para ofrecerte una experiencia amigable y animada 😊</p>
+
+        <div class="button-container">
+            <a href="#" class="btn">Más información</a>
+            <a href="#" class="btn">Contáctanos</a>
+        </div>
+    </div>
+
+    <audio autoplay loop hidden>
+        <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+</body>
+</html>
